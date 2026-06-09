@@ -597,6 +597,10 @@ section {
   font-size: 0.8rem;
 }
 
+[data-tel]::after {
+  content: attr(data-tel);
+}
+
 /* ── CONTACT ─────────────────────────────────────── */
 
 .contact-wrap {
@@ -769,10 +773,6 @@ footer {
     margin: 0 auto;
   }
 
-  nav {
-    position: relative;
-  }
-
   .nav-links {
     display: none;
     position: absolute;
@@ -785,10 +785,6 @@ footer {
     padding: 1.5rem 2rem;
     gap: 1.25rem;
     z-index: 99;
-  }
-
-  nav {
-    position: sticky;
   }
 
   #navbar {
