@@ -652,44 +652,36 @@ a.contact-item:hover {
 }
 
 .form-group {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-form label {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 1.1rem 1rem;
+  padding: 1rem;
   border-radius: 1.25rem;
   border: 1px solid var(--border);
   background: rgba(240, 220, 180, 0.03);
   color: var(--text);
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease, background 0.2s ease;
   resize: vertical;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: rgba(201,169,110,0.3);
-}
-
-.contact-form label {
-  position: absolute;
-  top: 1.05rem;
-  left: 1rem;
-  color: var(--muted);
-  pointer-events: none;
-  transition: transform 0.2s ease, opacity 0.2s ease, font-size 0.2s ease;
-  font-size: 0.95rem;
-}
-
-.contact-form input:focus + label,
-.contact-form textarea:focus + label,
-.contact-form input:not(:placeholder-shown) + label,
-.contact-form textarea:not(:placeholder-shown) + label {
-  transform: translateY(-1.4rem);
-  opacity: 0.75;
-  font-size: 0.76rem;
+  border-color: rgba(201,169,110,0.4);
+  background: rgba(201,169,110,0.04);
 }
 
 button[type="submit"] {
